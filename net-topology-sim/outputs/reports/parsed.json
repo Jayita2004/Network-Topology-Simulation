@@ -1,0 +1,110 @@
+{
+  "R1": {
+    "hostname": "R1",
+    "interfaces": [
+      {
+        "name": "Gig0/0",
+        "description": "to R2 Gig0/0",
+        "ip": "10.0.12.1",
+        "mask": "255.255.255.252",
+        "bandwidth": 100000,
+        "mtu": 1500,
+        "vlan": 0,
+        "network": "10.0.12.0/30"
+      },
+      {
+        "name": "Gig0/1",
+        "description": "to S1 access vlan 10",
+        "ip": "192.168.10.1",
+        "mask": "255.255.255.0",
+        "bandwidth": 100000,
+        "mtu": 1500,
+        "vlan": 0,
+        "network": "192.168.10.0/24"
+      }
+    ],
+    "routing": {
+      "ospf": [
+        {
+          "process": 1
+        }
+      ],
+      "bgp": []
+    }
+  },
+  "R2": {
+    "hostname": "R2",
+    "interfaces": [
+      {
+        "name": "Gig0/0",
+        "description": "to R1 Gig0/0",
+        "ip": "10.0.12.2",
+        "mask": "255.255.255.252",
+        "bandwidth": 100000,
+        "mtu": 1400,
+        "vlan": 0,
+        "network": "10.0.12.0/30"
+      },
+      {
+        "name": "Gig0/1",
+        "description": "to R3 Gig0/0",
+        "ip": "10.0.23.1",
+        "mask": "255.255.255.252",
+        "bandwidth": 50000,
+        "mtu": 1500,
+        "vlan": 0,
+        "network": "10.0.23.0/30"
+      }
+    ],
+    "routing": {
+      "ospf": [
+        {
+          "process": 1
+        }
+      ],
+      "bgp": []
+    }
+  },
+  "R3": {
+    "hostname": "R3",
+    "interfaces": [
+      {
+        "name": "Gig0/0",
+        "description": "to R2 Gig0/1",
+        "ip": "10.0.23.2",
+        "mask": "255.255.255.252",
+        "bandwidth": 50000,
+        "mtu": 1500,
+        "vlan": 0,
+        "network": "10.0.23.0/30"
+      }
+    ],
+    "routing": {
+      "ospf": [],
+      "bgp": [
+        {
+          "asn": 65010
+        }
+      ]
+    }
+  },
+  "S1": {
+    "hostname": "S1",
+    "interfaces": [
+      {
+        "name": "Vlan10",
+        "description": "user-vlan",
+        "ip": "192.168.10.2",
+        "mask": "255.255.255.0",
+        "bandwidth": 100000,
+        "mtu": 1500,
+        "vlan": 0,
+        "network": "192.168.10.0/24"
+      }
+    ],
+    "routing": {
+      "ospf": [],
+      "bgp": []
+    }
+  }
+}

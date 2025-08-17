@@ -1,0 +1,8 @@
+hostname S1
+!
+interface Vlan10
+ description user-vlan
+ ip address 192.168.10.2 255.255.255.0
+ bandwidth 100000
+ mtu 1500
+!

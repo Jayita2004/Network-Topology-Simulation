@@ -1,0 +1,21 @@
+{
+  "endpoints": [
+    {
+      "name": "HostA",
+      "device": "R1",
+      "vlan": 10,
+      "avg_mbps": 10,
+      "peak_mbps": 50
+    },
+    {
+      "name": "HostB",
+      "device": "R3",
+      "vlan": 0,
+      "avg_mbps": 10,
+      "peak_mbps": 50
+    }
+  ],
+  "assumptions": {
+    "use_peak": true
+  }
+}

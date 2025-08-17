@@ -1,0 +1,26 @@
+{
+  "issues": [
+    {
+      "type": "mtu_mismatch_warning",
+      "link": [
+        "R1",
+        "R2"
+      ],
+      "edge_mtu": 1400
+    },
+    {
+      "type": "protocol_recommendation",
+      "advice": "Use BGP for inter-domain and OSPF for intra-domain boundaries."
+    },
+    {
+      "type": "aggregation_opportunity",
+      "node": "R3",
+      "reason": "Leaf node; consider collapsing if not needed."
+    },
+    {
+      "type": "aggregation_opportunity",
+      "node": "S1",
+      "reason": "Leaf node; consider collapsing if not needed."
+    }
+  ]
+}

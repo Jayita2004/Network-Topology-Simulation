@@ -1,0 +1,8 @@
+{
+  "link_loads_mbps": {
+    "R1-R2": 50,
+    "R1-S1": 0,
+    "R2-R3": 50
+  },
+  "recommendations": []
+}

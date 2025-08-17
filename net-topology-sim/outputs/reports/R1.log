@@ -1,0 +1,10 @@
+[15:25:20] R1: Node started
+[15:25:21] R1: HELLO from S1
+[15:25:21] R1: HELLO from R2
+[15:25:22] R1: HELLO from R2
+[15:25:22] R1: HELLO from S1
+[15:25:23] R1: HELLO from S1
+[15:25:23] R1: HELLO from R2
+[15:25:24] R1: HELLO from R2
+[15:25:24] R1: HELLO from S1
+[15:25:25] R1: Node stopped

@@ -1,0 +1,10 @@
+[15:25:20] R2: Node started
+[15:25:21] R2: HELLO from R3
+[15:25:21] R2: HELLO from R1
+[15:25:22] R2: HELLO from R1
+[15:25:22] R2: HELLO from R3
+[15:25:23] R2: HELLO from R3
+[15:25:23] R2: HELLO from R1
+[15:25:24] R2: HELLO from R1
+[15:25:24] R2: HELLO from R3
+[15:25:25] R2: Node stopped
