@@ -10,11 +10,11 @@ This is a **beginner‑friendly** starter project that solves the core parts of 
 
 > Tip: Open this folder in VS Code or any IDE.
 
-## 0) Prerequisites
+## 1) Prerequisites
 - Install Python 3.10+
 - Open a terminal (Windows PowerShell or macOS/Linux shell)
 
-## 1) Create and activate a virtual env (recommended)
+## 2) Create and activate a virtual env (recommended)
 
 **Windows (PowerShell):**
 ```powershell
@@ -34,7 +34,7 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-## 2) Project layout
+## 3) Project layout
 ```
 net-topology-sim/
 ├─ conf/                     # Put your router/switch config files here
@@ -58,7 +58,7 @@ net-topology-sim/
 └─ README.md
 ```
 
-## 3) Try it quickly (uses the sample configs already in `conf/`)
+## 4) Try it quickly (uses the sample configs already in `conf/`)
 ```bash
 # from project root (this folder)
 python -m src.main parse --conf ./conf --out ./outputs/reports/parsed.json
@@ -79,7 +79,7 @@ python -m src.main pause-resume --conf ./conf --seconds 6
 
 Logs are printed to the console and also written per-device to `outputs/reports/*.log`.
 
-## 4) Bring your own configs later
+## 5) Bring your own configs later
 Put your real config dumps under `conf/<DEVICE>/config.dump`. The parser is intentionally simple and looks for lines like:
 ```
 hostname R1
@@ -94,10 +94,8 @@ router ospf 1
 ```
 If two interfaces are in the **same subnet** or if an interface `description` says `to <Neighbor>`, the tool links them.
 
-## 5) Extend it
+## 6) Extend it
 - Add more validators (gateway checks, VLAN database, etc.)
 - Emit Graphviz diagrams
 - Replace the FIFO with sockets (TCP/IP) if you want true IPC over localhost
 - Integrate `scapy` to craft real IP packets (optional)
-
-Enjoy!
